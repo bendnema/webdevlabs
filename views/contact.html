@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <meta name="author" content="Your name">
+        <meta name="author" content="Benedict Nematadzira">
         <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-        <meta name="description" content="Your name professional website">
+        <meta name="description" content="Benedict Nematadzira professional website">
+        <link rel="stylesheet" href="../static/style.css">
         <title>Your name</title>
+
     </head>
     <body>
-        <header><h1>Benedict Nematadzira</h1></header>
+        <header><h1 id="webname">Benedict Nematadzira</h1></header>
 
         <nav> 
             <a href="../index.html">Home</a> 
@@ -18,9 +21,7 @@
 
         <h2 attribute="main">Contact Me</h2>
 
-       
-
-        <p id ="intro" attribute="main">Contact Method Description</p>
+      
         
         <form action="/contact.php" method="post" style="display: flex; gap: 10px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 200px;">
@@ -40,10 +41,25 @@
             </div>
           </form> 
 
-          <h3>Contact Method Description</h3>
-          <p>bnematad@andrew.cmu.edu</p>
-          <p>873-283-2452</p>
-          <p>benedict-nematadzira</p>
+
+          <table class="contact-table">
+            <tr>
+              <th>Contact Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>bnematad@andrew.cmu.edu</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>873-283-2452</td>
+            </tr>
+            <tr>
+              <td>LinkedIn</td>
+              <td>benedict-nematadzira</td>
+            </tr>
+          </table>
         
 
 
