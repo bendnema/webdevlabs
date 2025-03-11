@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+  * {
+    color: black; 
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;  /* Lightest weight */
+    font-style: normal; 
+    padding: 5px; 
+  }
+  
+  
+  .roboto-custom {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Medium weight */
+    font-style: normal;
+  }
+  
+  #webname {
+    background-color: #92ad70;
+    color: white;
+}
+nav a {
+  text-decoration: none; 
+  color: #92ad70; 
+  margin-right: 15px;
+}
+
+th {
+  padding: 12px; 
+  background-color: #355c05; 
+  color: #b3fc5a; 
+  width: fit-content;
+}
+
+/* Add zebra stripes for table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+form {
+  text-align: center; 
+  display: block;
+}
+
+form * {
+  margin: auto;
+  display: block;
+}
+
+input[type = "submit"] {
+  background-color: #92ad70; 
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: white;
+  cursor: pointer;
+}
+
