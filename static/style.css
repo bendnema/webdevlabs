@@ -4,7 +4,7 @@
     color: black; 
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;  /* Lightest weight */
+    font-weight: 400;  
     font-style: normal; 
     padding: 5px; 
   }
@@ -34,7 +34,7 @@ th {
   width: fit-content;
 }
 
-/* Add zebra stripes for table rows */
+
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
