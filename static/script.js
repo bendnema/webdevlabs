@@ -99,5 +99,84 @@ function greetingFunc() {
     }
 }
 
+$(document).ready(function() {
+    $("#readMore").click(function() {
+        $("#shortBio").hide();
+        $("#longBio").show();
+        $("#readMore").hide();
+        $("#readLess").show();
+    });
+
+    $("#readLess").click(function() {
+        $("#shortBio").show();
+        $("#longBio").hide();
+        $("#readMore").show();
+        $("#readLess").hide();
+    });
+})
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function(event) {
+        var isValid = true;
+
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var message = document.getElementById("message");
+
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var messageError = document.getElementById("messageError");
+
+        if (!name.checkValidity()) {
+            nameError.textContent = "Please enter your name.";
+            isValid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        if (!email.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        if (!message.checkValidity()) {
+            messageError.textContent = "Please enter your message.";
+            isValid = false;
+        } else {
+            messageError.textContent = "";
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});
+
+
+
+function showList() {
+    var list = document.getElementById("funList");
+    var button = document.querySelector("button[onclick='showList()']");
+    if (list && button) {
+        list.style.display = "block";
+        button.style.display = "none";
+    }
+}
 
 greetingFunc();
+
+function addYear() {
+    var d = new Date();
+    var year = d.getFullYear();
+    var copyYearElement = document.getElementById("copy-year");
+    if (copyYearElement) {
+        copyYearElement.innerHTML = year;
+    }
+}
+
+addYear();
