@@ -78,10 +78,10 @@ function greetingFunc()
         greeting = "Good night";
     }
 
-    if (window.location.href.indexOf("index.html") > -1 ||
-        window.location.heref.endsWith("/") ||
+    if (window.location.href.indexOf("index.html") > -1 || 
+        window.location.href.endsWith("/") || 
         window.location.href.endsWith("/benedictnema-lab3")) {
-        var greetingElement = document.getElementById("greeting");
+        var greetingElement = document.querySelector("h2[attribute='main']");
         if (greetingElement) {
             greetingElement.innerHTML = greeting + ", my name is Ben";
         }
