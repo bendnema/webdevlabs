@@ -58,3 +58,35 @@ input[type = "submit"] {
   cursor: pointer;
 }
 
+#funList {
+  display: none;
+}
+
+#shortBio, #longBio {
+  margin: 10px 0;
+}
+
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+#shortBio, #longBio {
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #92ad70;
+  color: white;
+  border: none;
+  cursor:pointer;
+}
+
+button:hover {
+  background-color: #7a9c5c;
+}
