@@ -7,10 +7,10 @@
         <meta name="description" content="Benedict Nematadzira professional website">
         <link rel="stylesheet" href="../static/style.css">
         <script defer src="../static/script.js"></script>
-        <title>Your name</title>
+        <title>Contact Me</title>
 
     </head>
-    <body>
+    <body onload="addYear()">
         <header><h1 id="webname">Benedict Nematadzira</h1></header>
 
         <nav> 
@@ -24,23 +24,21 @@
 
       
         
-        <form action="/contact.php" method="post">
-            <div>
-              <label for="name">Your Name (required)</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div>
-              <label for="comment">Your Comment</label>
-              <textarea id="comment" name="comment" rows="5"></textarea>
-            </div>
-            <div>
-              <input type="submit" value="SEND">
-            </div>
-        </form>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <span id="nameError" class="error"></span>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <span id="emailError" class="error"></span>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <span id="messageError" class="error"></span>
+  
+          <button type="submit">Submit</button>
+      </form>
 
 
           <table class="contact-table">
@@ -64,7 +62,10 @@
         
 
 
-        <footer>©2025 designed and coded by Benedict Nematadzira</footer>
+          <footer>
+            <p id="copyYear"></p>
+            <p>©Designed and coded by Benedict Nematadzira</p>
+        </footer>
 
     </body>
     <nav>
