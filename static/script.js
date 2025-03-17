@@ -61,15 +61,13 @@ function findTheBananaForEach(array)
 findTheBananaForEach(L1);
 findTheBananaForEach(L2);
 
-function greetingFunc()
-{
+function greetingFunc() {
     var d = new Date();
     var h = d.getHours();
     var greeting;
-
-    if (h < 12) 
-    {
-        greetings = "Good morning";
+    
+    if (h < 12) {
+        greeting = "Good morning";
     } else if (h < 18) {
         greeting = "Good afternoon";
     } else if (h < 20) {
@@ -78,18 +76,26 @@ function greetingFunc()
         greeting = "Good night";
     }
 
-    if (window.location.href.indexOf("index.html") > -1 || 
-        window.location.href.endsWith("/") || 
-        window.location.href.endsWith("/benedictnema-lab3")) {
-        var greetingElement = document.querySelector("h2[attribute='main']");
-        if (greetingElement) {
-            greetingElement.innerHTML = greeting + ", my name is Ben";
+    // Check if we're on index.html
+    var currentPath = window.location.pathname;
+    if (currentPath) {
+        if (currentPath.includes("index.html") || 
+            currentPath.endsWith("/") || 
+            currentPath === "" ||
+            currentPath.endsWith("/benedictnema-lab3")) {
+            
+            var greetingElement = document.querySelector("h2[attribute='main']");
+            if (greetingElement) {
+                greetingElement.innerHTML = greeting + ", my name is Ben";
+            }
+        } else {
+            console.log(greeting);
         }
-    } else  {
-        consloe.log(greeting);
+    } else {
+        
+        console.log(greeting);
     }
 }
 
 
-// Call the greeting function
 greetingFunc();
