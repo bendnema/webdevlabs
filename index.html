@@ -6,9 +6,10 @@
         <meta name="description" content="Benedict Nematadzira professional website">
         <link rel="stylesheet" href="static/style.css">
         <script defer src="./static/script.js"></script>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Your name</title>
     </head>
-    <body>
+    <body onload="addYear()">
         <nav> 
             <header><h1 id="webname">Benedict Nematadzira</h1></header>
             <a href="index.html">Home</a> 
@@ -22,7 +23,17 @@
 
         <p id ="intro" attribute="main">Freshman at Carnegie Mellon University. Interested in data analysis in addition to other subjects such as computer science, finance, and machine learning. Extracurricular span from soccer and swimming to community work and activism.</p>
 
-        <footer>©2025 designed and coded by Benedict Nematadzira</footer>
+        <section id="bio">
+            <p id="shortBio">This is the short version of my bio...</p>
+            <p id="longBio">This is the long version of my bio...</p>
+            <button id="readMore">Read More</button>
+            <button id="readLess" style="display:none;">Read Less</button>
+        </section>
+        
+        <footer>
+            <p id="copyYear"></p>
+            <p>©Designed and coded by Benedict Nematadzira</p>
+        </footer>
 
     </body>
     <nav>
