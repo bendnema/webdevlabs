@@ -76,6 +76,8 @@ function greetingFunc() {
         greeting = "Good night";
     }
 
+    console.log(greeting);
+
     // Check if we're on index.html
     var currentPath = window.location.pathname;
     if (currentPath) {
@@ -87,7 +89,6 @@ function greetingFunc() {
             var greetingElement = document.querySelector("h2[attribute='main']");
             if (greetingElement) {
                 greetingElement.innerHTML = greeting + ", my name is Ben";
-                console.log(greeting);
             }
         } else {
             console.log(greeting);
