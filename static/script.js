@@ -117,46 +117,71 @@ $(document).ready(function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Make sure this code only runs on pages with the contact form
     var form = document.getElementById("contactForm");
+    if (!form) return; // Exit if the form doesn't exist on this page
+
+    console.log("Form validation script loaded"); // Debug message
+    
+    // Add an immediate test to make sure formError is accessible
+    var formError = document.getElementById("formError");
+    if (formError) {
+        console.log("formError element found");
+    } else {
+        console.log("formError element NOT found - check your HTML");
+    }
 
     form.addEventListener("submit", function(event) {
+        console.log("Form submission attempted"); // Debug message
+        
         var isValid = true;
-
         var name = document.getElementById("name");
         var email = document.getElementById("email");
         var message = document.getElementById("message");
         var formError = document.getElementById("formError");
+        
+        // Double-check formError exists when form is submitted
+        if (!formError) {
+            console.error("formError element not found during submission");
+            // Create it if it doesn't exist
+            formError = document.createElement("p");
+            formError.id = "formError";
+            formError.className = "error";
+            form.appendChild(formError);
+        }
 
         var nameError = document.getElementById("nameError");
         var emailError = document.getElementById("emailError");
         var messageError = document.getElementById("messageError");
 
-        if (!name.checkValidity()) {
-            nameError.textContent = "Please enter your name.";
+        // Clear previous errors
+        if (nameError) nameError.textContent = "";
+        if (emailError) emailError.textContent = "";
+        if (messageError) messageError.textContent = "";
+        formError.textContent = "";
+
+        // Validate fields
+        if (!name || !name.value.trim()) {
+            if (nameError) nameError.textContent = "Please enter your name.";
             isValid = false;
-        } else {
-            nameError.textContent = "";
         }
 
-        if (!email.checkValidity()) {
-            emailError.textContent = "Please enter a valid email address.";
+        if (!email || !email.value.trim() || !email.value.includes('@')) {
+            if (emailError) emailError.textContent = "Please enter a valid email address.";
             isValid = false;
-        } else {
-            emailError.textContent = "";
         }
 
-        if (!message.checkValidity()) {
-            messageError.textContent = "Please enter your message.";
+        if (!message || !message.value.trim()) {
+            if (messageError) messageError.textContent = "Please enter your message.";
             isValid = false;
-        } else {
-            messageError.textContent = "";
         }
 
+        // Show form error if any validation failed
         if (!isValid) {
             formError.textContent = "Please fill out the form correctly so I can get back to you :)";
-            event.preventDefault();
-        } else {
-            formError.textContent = "";
+            formError.style.display = "block"; // Ensure it's visible
+            console.log("Form validation failed, displaying error"); // Debug message
+            event.preventDefault(); // Prevent form submission
         }
     });
 });
