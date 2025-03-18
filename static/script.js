@@ -152,7 +152,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (!isValid) {
+            formError.textContent = "Please fill out the form correctly so I can get back to you :)"; // Added this line
             event.preventDefault();
+        } else {
+            formError.textContent = "";
         }
     });
 });
