@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var name = document.getElementById("name");
         var email = document.getElementById("email");
         var message = document.getElementById("message");
+        var formError = document.getElementById("formError"); // Added this line
 
         var nameError = document.getElementById("nameError");
         var emailError = document.getElementById("emailError");
@@ -152,14 +153,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (!isValid) {
-            formError.textContent = "Please fill out the form correctly so I can get back to you :)"; // Added this line
+            formError.textContent = "Please fill out the form correctly so I can get back to you :)";
             event.preventDefault();
         } else {
             formError.textContent = "";
         }
     });
 });
-
 
 
 function showList() {
