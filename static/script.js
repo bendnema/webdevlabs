@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var name = document.getElementById("name");
         var email = document.getElementById("email");
         var message = document.getElementById("message");
-        var formError = document.getElementById("formError"); // Added this line
+        var formError = document.getElementById("formError");
 
         var nameError = document.getElementById("nameError");
         var emailError = document.getElementById("emailError");
