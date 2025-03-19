@@ -25,7 +25,8 @@
 
       
         
-        <form id="contactForm">
+        <form action="/contact.php" method="post">
+            <div id="formError" class="error-message"></div>
             <label for="name">Name(required)</label>
             <input type="text" id="name" name="name" required>
             <span id="nameError" class="error"></span>
