@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var nameError = document.getElementById("nameError");
         var emailError = document.getElementById("emailError");
         var messageError = document.getElementById("messageError");
+        var formError = document.getElementById("formError");
 
         if (!name.checkValidity()) {
             nameError.textContent = "Please enter your name.";
