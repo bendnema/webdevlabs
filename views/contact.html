@@ -25,8 +25,7 @@
 
       
         
-        <form action="/contact.php" method="post">
-            <div id="formError" class="error-message"></div>
+        <form id="contactForm">
             <label for="name">Name(required)</label>
             <input type="text" id="name" name="name" required>
             <span id="nameError" class="error"></span>
@@ -39,8 +38,8 @@
             <textarea id="message" name="message" required></textarea>
             <span id="messageError" class="error"></span>
         
-            <button type="submit" onclick="validateContactForm(); return false;">Submit</button>
-            <p id="formError" class="error"></p>
+            <button type="submit">Submit</button>
+            <p id="formError" class="error">Please fill out the form correctly so I can get back to you :)</p>
         </form>
 
 
