@@ -160,6 +160,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function validateContactForm() {
+    // Check if we're on the contact page
+    var contactForm = document.querySelector("form");
+    
+    if (contactForm) {
+        // Get form elements
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var comment = document.getElementById("comment");
+        var formError = document.getElementById("formError");
+        
+        // Add submit event listener to the form
+        contactForm.addEventListener("submit", function(event) {
+            // Check form validity
+            if (!name.checkValidity() || !email.checkValidity() || !comment.checkValidity()) {
+                // Prevent form submission
+                event.preventDefault();
+                
+                // Display error message
+                formError.textContent = "Please fill out the form correctly so I can get back to you :)";
+                formError.style.color = "red";
+                formError.style.marginBottom = "10px";
+            } else {
+                // Clear error message if form is valid
+                formError.textContent = "";
+            }
+        });
+    }
+}
+
+// Call the validation function
+validateContactForm();
+
 
 
 function showList() {
