@@ -193,6 +193,17 @@ function validateContactForm() {
 // Call the validation function
 validateContactForm();
 
+function validate()
+{
+    error.innerHTML = ""'
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var comment = document.getElementById("comment");
+    var error = document.getElementById("error);
+    if (!name.checkValdidity() || !email.checkValdity() || !comment.checkValidity()) {
+        error.innerHTML = "Please enter valid info";
+    }
+}
 
 
 function showList() {
