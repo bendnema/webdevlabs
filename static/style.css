@@ -1,92 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-  * {
-    color: black; 
+* {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;  
-    font-style: normal; 
-    padding: 5px; 
-  }
-  
-  
-  .roboto-custom {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400; /* Medium weight */
+    font-weight: 100;
     font-style: normal;
-  }
-  
-  #webname {
-    background-color: #92ad70;
+    font-variation-settings: "wdth" 100;
+    padding: 5px;
+    margin: 5px;
+}
+
+header {
     color: white;
 }
+
+#webname {
+    background-color: #92ad70;
+}
+
 nav a {
-  text-decoration: none; 
-  color: #92ad70; 
-  margin-right: 15px;
+    text-decoration: none;
+    margin-right: 15px;
+    color:#92ad70;
 }
 
 th {
-  padding: 12px; 
-  background-color: #355c05; 
-  color: #b3fc5a; 
-  width: fit-content;
-}
-
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-form {
-  text-align: center; 
-  display: block;
-}
-
+    padding: 12px;
+    background-color: darkgray;
+    color: white;
+    width: fit-content;
+ }
+ 
+ table tr:nth-child(even) {
+    background-color: lightgray;
+ }
+ 
 form * {
-  margin: auto;
-  display: block;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
-input[type = "submit"] {
-  background-color: #92ad70; 
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  color: white;
-  cursor: pointer;
+input[type="submit"] {
+    background-color: #92ad70;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-#funList {
-  display: none;
+#FavList {
+    /* display: none; */
+}
+ #SeeMoreBTN{
+    background-color: lightgrey;
+    border: 0px;
+    border-radius: 16px;
+    font-size:large;
+ }
+
+ #shortIntro {
+    display: block;
+ }
+ 
+ #readLess, #longIntro {
+    display: none;
+ }
+ 
+ #readLess, #readMore {
+    font-style: italic;
+    background-color: lightgrey;
+ }
+ 
+ #ValidateMsg {
+    width: max-content;
+    margin: auto;
 }
 
-#shortBio, #longBio {
-  margin: 10px 0;
+.funIMG {
+    border-radius: 100%;
 }
 
-
-.error {
-   color: red;
-   font-size: 0.9em;
-   margin-top: 5px;
-   display: block;
-}
-
-#shortBio, #longBio {
-  margin: 10px 0;
+.container {
+    border-radius: 10%;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
 }
 
 button {
-  margin: 10px 0;
-  padding: 10px 20px;
-  background-color: #92ad70;
-  color: white;
-  border: none;
-  cursor:pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #7a9c5c;
+    background-color: #45a049;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1, .item2, .item3, .item4 {
+    flex: 1 1 45%;
+    margin: 10px;
 }
