@@ -1,76 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <title>Your name</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="../static/script.js"></script>
     
-    <head>
-        <meta name="author" content="Benedict Nematadzira">
-        <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-        <meta name="description" content="Benedict Nematadzira professional website">
-        <link rel="stylesheet" href="../static/style.css">
-        <script defer src="../static/script.js"></script>
-        <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <title>Contact Me</title>
-
-    </head>
-    <body onload="addYear()">
-        <header><h1 id="webname">Benedict Nematadzira</h1></header>
-
-        <nav> 
-            <a href="../index.html">Home</a> 
-            <a href="cv.html">CV</a> 
-            <a href="contact.html">Contact me</a> 
-            <a href="fun.html">For fun</a> 
+</head>
+<body onload=" addYear()">
+    <header>
+        <h1 id="webname">your name</h1>
+        <nav>
+            <a href="../index.html">about</a>
+            <a href="cv.html">resume</a>
+            <a href="fun.html">play</a>
+            <a href="contact.html">contact</a>
         </nav>
-
-        <h2 attribute="main">Contact Me</h2>
-
-      
-        
-        <form id="contactForm">
-            <label for="name">Name(required)</label>
-            <input type="text" id="name" name="name" required>
-            <span id="nameError" class="error"></span>
-        
-            <label for="email">Email(required)</label>
-            <input type="email" id="email" name="email" required>
-            <span id="emailError" class="error"></span>
-        
-            <label for="message">Message(required)</label>
-            <textarea id="message" name="message" required></textarea>
-            <span id="messageError" class="error"></span>
-        
-            <button type="submit">Submit</button>
-            <p id="formError" class="error"></p>
-        </form>
-
-
-          <table class="contact-table">
-            <tr>
-              <th>Contact Method</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>Email</td>
-              <td>bnematad@andrew.cmu.edu</td>
-            </tr>
-            <tr>
-              <td>Phone</td>
-              <td>873-283-2452</td>
-            </tr>
-            <tr>
-              <td>LinkedIn</td>
-              <td>benedict-nematadzira</td>
-            </tr>
-          </table>
-        
-
-
-          <footer>
-            <p id="copyYear"></p>
-            <p>©Designed and coded by Benedict Nematadzira</p>
-        </footer>
-
-    </body>
-    <nav>
-
-    </nav>
+    </header>
+    <div class="mainLayout">
+        <div class="item1">
+            <h2>Find Me</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=your_map_embed_code" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="item2">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Your name (required)</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Your email (required)</label>
+                <input type="email" name ="email" id="email">
+                <label for="comment">Your message (required)</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" onclick="validate()">
+            </form>
+            <p id="ValidateMsg"></p>
+            <table>
+                <tr><th>Contact Method</th><th>Description</th></tr>
+                <tr><td>Email</td><td></td></tr>
+                <tr><td>Phone</td><td></td></tr>
+                <tr><td>LinkedIn</td><td></td></tr>
+            </table>
+        </div>
+    </div>
+    <footer>        
+        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by your name &copy; </p>
+    </footer>
+</body>
 </html>
