@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="author" content="Benedict Nematadzira">
-        <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-        <meta name="description" content="Benedict Nematadzira professional website">
-        <link rel="stylesheet" href="static/style.css">
-        <script defer src="./static/script.js"></script>
-        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <title>Your name</title>
-    </head>
-    <body onload="addYear()">
-        <nav> 
-            <header><h1 id="webname">Benedict Nematadzira</h1></header>
-            <a href="index.html">Home</a> 
-            <a href="views/cv.html">CV</a> 
-            <a href="views/contact.html">Contact me</a> 
-            <a href="views/fun.html">For fun</a> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <title>Your name</title>
+    <link rel="stylesheet" href="./static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="./static/script.js"></script>
+
+    
+</head>
+<body onload="addYear()">
+    <header>
+        <h1 id="webname">your name</h1>
+        <nav>
+            <a href="index.html">about</a>
+            <a href="views/cv.html">resume</a>
+            <a href="views/fun.html">play</a>
+            <a href="views/contact.html">contact</a>
         </nav>
-
-        <h2 id="greeting" attribute="main">Hi my name is Ben</h2>
-        <img src="static/profilePic.jpg" alt="text">
-
-        <p id ="intro" attribute="main">Freshman at Carnegie Mellon University. Interested in data analysis in addition to other subjects such as computer science, finance, and machine learning. Extracurricular span from soccer and swimming to community work and activism.</p>
-
-        <section id="bio">
-            <p id="shortBio">This is the short version of my bio...</p>
-            <p id="longBio" style="display: none;">This is the long version of my bio...</p>
-            <button id="readMore">Read More</button>
-            <button id="readLess" style="display:none;">Read Less</button>
-        </section>
-        
-        <footer>
-            <p id="copyYear"></p>
-            <p>©Designed and coded by Benedict Nematadzira</p>
-        </footer>
-
-    </body>
-    <nav>
-
-    </nav>
+    </header>
+    <div class="main">
+        <!-- <h2>Hi, my name is your name</h2> -->
+        <h2 id="greeting"></h2>
+        <img src="static/photo.png" alt="your full name profile image" width="350">
+        <div>
+            <span id="shortIntro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            <span id="readMore">read more ...</span>
+            <span id="longIntro"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            <span id="readLess">read less</span>
+        </div>    
+    </div>
+    <footer> 
+        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by your name &copy; </p>
+    </footer>
+</body>
 </html>
