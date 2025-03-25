@@ -187,3 +187,18 @@ function getAdvice() {
         });
 }
 
+document.getElementById('hamburger').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+});
+
+
