@@ -22,6 +22,15 @@ nav a {
     color:#92ad70;
 }
 
+.nav-links a.active {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
 th {
     padding: 12px;
     background-color: darkgray;
@@ -111,3 +120,4 @@ button:hover {
     flex: 1 1 45%;
     margin: 10px;
 }
+
